@@ -1,0 +1,22 @@
+### Código
+
+Todo o código para criação desse dashboard e a planilha original com os dados 
+
+[covid19-brasil_io.csv](https://github.com/gu-stat/dados_covid19_br/blob/master/covid19-brasil_io_novo.csv) podem ser encontrados no meu repositório no GitHub: [gu-stat/dadoscoronavirus](https://github.com/gu-stat/dadoscoronavirus)
+
+### Fonte dos Dados
+
+O site [Brasil IO](https://brasil.io/dataset/covid19/caso) compila os dados a partir dos governos estaduais, com dados sobre município.
+
+### Licença dos dados
+A base de dados [caso.csv](https://data.brasil.io/dataset/covid19/_meta/list.html) obtida via [Brasil IO](https://brasil.io/dataset/covid19/caso) - e salva como [covid19-brasil_io.csv](https://github.com/gu-stat/dados_covid19_br/blob/master/covid19-brasil_io_novo.csv), no meu repositório - é disponibilizada sob a licença: [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). 
+
+### Outros projetos
+
+* Fórum [Dados Abertos](https://dadosabertos.social/t/dados-sobre-a-pandemia-do-novo-coronavirus/267);
+
+* Projeções: [Observatório COVID-19 BR](https://covid19br.github.io/)
+
+* Dados e scripts sobre a série histórica da pandemia COVID-19 - Níveis Nacional e Estadual - por [belisards/coronabr](https://github.com/belisards/coronabr)
+
+* Dados sobre a série histórica da pandemia COVID-19 - Nível Municipal, por [Wesley Cota](https://labs.wesleycota.com/sarscov2/br/).

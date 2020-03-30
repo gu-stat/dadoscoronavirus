@@ -1,0 +1,76 @@
+html {
+  height:100%;
+}
+
+body {
+  height: 95vh;
+}
+
+/*.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* CHANGE LINE COLOR */
+
+.box {
+  height:50%;
+}
+
+hr {
+  border-top: 1px solid gray;
+}
+/*
+/* To change text color of Table Body in Quality RatingG uidelines Table */
+/*tbody {*/
+  /*color: #ffffff;*/
+/*}*/
+/*
+.dataTables_wrapper .dataTables_length {
+  color: #ffffff;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  color: #ffffff;
+}
+  
+.dataTables_wrapper .dataTables_info {
+  color: #ffffff;
+}
+
+/* To change text and background color of the `Select` (Show Entries) box */
+/* for Table in Legend Tab */
+/*
+.dataTables_length select {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* To change text and background color of the `Select` (Show Entries) Menu */
+/* for Table in Legend Tab */
+/*
+.dataTables_length option {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.nav-stacked>li>a {
+    color: #ffffff;
+}
+
+.small-box .icon-large {
+    color: #ffffff;
+}
+
+.panel-default>.panel-heading {
+  background-color: #1c1e22;
+}
+
+.panel-default {
+  border-color: #1c1e22;;
+}
+
+}
+*/
