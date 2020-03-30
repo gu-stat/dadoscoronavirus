@@ -135,9 +135,9 @@ mapaModule <- function(input, output, session, local){
             #   variavel_analise_mapa = sum(mortes_dia)
             # )
           
-          tmp_min_mapa <- min(tmp_map$variavel_analise_mapa)
+          tmp_min_mapa <- min(tmp_map$variavel_analise_mapa, na.rm = TRUE)
           
-          tmp_max_mapa <- max(tmp_map$variavel_analise_mapa)
+          tmp_max_mapa <- max(tmp_map$variavel_analise_mapa, na.rm = TRUE)
           
           if (tmp_max_mapa == 0) {
             tmp_max_color_mapa <- "#f7f7f7"
