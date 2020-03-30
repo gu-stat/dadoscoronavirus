@@ -58,7 +58,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Beta - v03.02")
+          p("Versão Open Beta - v01.10")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(
