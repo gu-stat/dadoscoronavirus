@@ -8,47 +8,47 @@
 
 #arquivo <- "https://raw.githubusercontent.com/gu-stat/dados_covid19_br/master/covid19-brasil_io.csv"
 
-arquivo <- "https://raw.githubusercontent.com/gu-stat/dados_covid19_br/master/covid19-brasil_io_novo.csv"
+#arquivo <- "https://raw.githubusercontent.com/gu-stat/dados_covid19_br/master/covid19-brasil_io_novo.csv"
 
 salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io.csv"
 
 # |_ Download ==================================================================
 
-downloadGithubData <- function() {
-  tmp <- read.csv(
-    file = arquivo,
-    stringsAsFactors = FALSE
-  )
-  
-  write.csv(
-    x = tmp,
-    file = salvar_como
-  )
-}
+# downloadGithubData <- function() {
+#   tmp <- read.csv(
+#     file = arquivo,
+#     stringsAsFactors = FALSE
+#   )
+#   
+#   write.csv(
+#     x = tmp,
+#     file = salvar_como
+#   )
+# }
 
 # |_ Update ====================================================================
 
 # Update a cada dia
 
-updateData <- function() {
-  if (!dir.exists("./www/S00_Dados_Brutos")) {
-    
-    dir.create("./www/S00_Dados_Brutos")
-    
-    downloadGithubData()
-    
-  } else if ((!file.exists(salvar_como)) || 
-             (as.double(
-               Sys.time() - file_info(salvar_como)$change_time, 
-               units = "days") > 1
-             )) {
-    downloadGithubData()
-  }
-}
-
-# Fazer update assim que o app abrir
-
-updateData()
+# updateData <- function() {
+#   if (!dir.exists("./www/S00_Dados_Brutos")) {
+#     
+#     dir.create("./www/S00_Dados_Brutos")
+#     
+#     downloadGithubData()
+#     
+#   } else if ((!file.exists(salvar_como)) || 
+#              (as.double(
+#                Sys.time() - file_info(salvar_como)$change_time, 
+#                units = "days") > 1
+#              )) {
+#     downloadGithubData()
+#   }
+# }
+# 
+# # Fazer update assim que o app abrir
+# 
+# updateData()
 
 dados_originais_br_io <- read.csv(
   file = salvar_como,
