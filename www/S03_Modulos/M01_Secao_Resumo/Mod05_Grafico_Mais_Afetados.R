@@ -53,8 +53,9 @@ graficoMAModule <- function(input, output, session, dados_analise, local){
 
       tmp_dados_mais_afetados <-
         dados_estados %>%
-        filter(dia == data_final) %>%
-        group_by(uf)
+        #filter(dia == data_final) %>%
+        filter(is_last == "True") %>%
+        group_by(uf_num)
 
       title_mais_afetados <- "Estados Mais Afetados"
       

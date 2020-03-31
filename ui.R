@@ -15,7 +15,7 @@ fluidPage(
   
   # CSS ========================================================================
 
-  overallCSS,       # See global.R
+  #overallCSS,       # See global.R
   # footerCSS,        # See global.R
   
  # Navegacao ===================================================================
@@ -58,7 +58,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v01.10")
+          p("Versão Open Beta - v01.1")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(
