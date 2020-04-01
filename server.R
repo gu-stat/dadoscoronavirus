@@ -37,7 +37,7 @@ function(input, output, session) {
           split(
             setNames(
               dados_selecionados_cidade$uf_num, 
-              dados_selecionados_cidade$uf
+              dados_selecionados_cidade$uf_nome
             ), 
             regiao
           )

@@ -126,12 +126,20 @@ cores_box_taxa_mortalidade <- "purple"
 
 # \__ Graficos/Mapas -----------------------------------------------------------
 
-cores_graficos_confirmado_caso  <- "#67a9cf"
+cores_graficos_confirmado_caso  <- "#068ad6"
+
 cores_graficos_confirmado_morte <- "red"
 cores_graficos_suspeito_caso    <- "darkgreen"
 cores_graficos_descartado_caso  <- "green"
 cores_graficos_taxa_mortalidade <- "purple"
 
+cores_mapa_confirmado_caso <- "#0488d4"
+cores_mapa_confirmado_caso_min <- "#f7f7f7"
+  #"#d9eefa"
+
+cores_mapa_confirmado_morte <- "red"
+cores_mapa_confirmado_morte_min <- "#f7f7f7"
+  #"#ffc4c6"
 
 # ************************************************************************* ####
 # FIM                                                                       ####

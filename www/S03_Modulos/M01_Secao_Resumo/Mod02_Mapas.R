@@ -103,8 +103,10 @@ mapaModule <- function(input, output, session, local){
         if (tmp_max_mapa == 0) {
           tmp_max_color_mapa <- "#f7f7f7"
         } else {
-          tmp_max_color_mapa <- cores_graficos_confirmado_caso
+          tmp_max_color_mapa <- cores_mapa_confirmado_caso
         }
+        
+        tmp_min_color_mapa <- "#f7f7f7"
         
         tmp_name_mapa <- "Total de Casos Confirmados"
         
@@ -113,7 +115,7 @@ mapaModule <- function(input, output, session, local){
         tmp_data_final_br  <- format(as.Date(tmp_data_final), "%m/%d/%Y")
         
         tmp_titulo_mapa <- paste0(
-          "Número Total de Casos Confirmados até ", tmp_data_final_br," - Brazil"
+          "Número Total de Casos Confirmados até ", tmp_data_final_br," - Brasil"
         )
         
         # tmp_fonte_mapa <- 
@@ -141,8 +143,10 @@ mapaModule <- function(input, output, session, local){
         if (tmp_max_mapa == 0) {
           tmp_max_color_mapa <- "#f7f7f7"
         } else {
-          tmp_max_color_mapa <- cores_graficos_confirmado_morte
+          tmp_max_color_mapa <- cores_mapa_confirmado_morte
         }
+        
+        tmp_min_color_mapa <- "white"
         
         tmp_name_mapa <- "Total de Mortes Confirmadas"
         
@@ -185,8 +189,16 @@ mapaModule <- function(input, output, session, local){
         if (tmp_max_mapa == 0) {
           tmp_max_color_mapa <- "#f7f7f7"
         } else {
-          tmp_max_color_mapa <- cores_graficos_confirmado_caso
+          tmp_max_color_mapa <- cores_mapa_confirmado_caso
         }
+        
+        # if (tmp_min_mapa == 0) {
+        #   tmp_min_color_mapa <- "#f7f7f7"
+        # } else {
+        #   tmp_min_color_mapa <- cores_mapa_confirmado_caso_min
+        # }
+        
+        tmp_min_color_mapa <- cores_mapa_confirmado_caso_min
         
         tmp_name_mapa <- "Total de Casos Confirmados"
         
@@ -222,8 +234,17 @@ mapaModule <- function(input, output, session, local){
         if (tmp_max_mapa == 0) {
           tmp_max_color_mapa <- "#f7f7f7"
         } else {
-          tmp_max_color_mapa <- cores_graficos_confirmado_morte
+          tmp_max_color_mapa <- cores_mapa_confirmado_morte
         }
+        
+        # if (tmp_min_mapa == 0) {
+        #   tmp_min_color_mapa <- "#f7f7f7"
+        # } else {
+        #   tmp_min_color_mapa <- cores_mapa_confirmado_morte_min
+        # }
+        
+        
+        tmp_min_color_mapa <- cores_mapa_confirmado_morte_min
         
         tmp_name_mapa <- "Total de Mortes Confirmadas"
         
@@ -249,6 +270,7 @@ mapaModule <- function(input, output, session, local){
       tmp_map            = tmp_map, 
       tmp_min_mapa       = tmp_min_mapa, 
       tmp_max_mapa       = tmp_max_mapa, 
+      tmp_min_color_mapa = tmp_min_color_mapa, 
       tmp_max_color_mapa = tmp_max_color_mapa, 
       tmp_name_mapa      = tmp_name_mapa, 
       tmp_titulo_mapa    = tmp_titulo_mapa,
@@ -321,7 +343,7 @@ mapaModule <- function(input, output, session, local){
     hc_colorAxis(
       min = mapa_dados()$tmp_min_mapa,
       max = mapa_dados()$tmp_max_mapa,
-      minColor = "white",
+      minColor = mapa_dados()$tmp_min_color_mapa,
       maxColor = mapa_dados()$tmp_max_color_mapa
     ) %>%
       # \\____ Titulo ####

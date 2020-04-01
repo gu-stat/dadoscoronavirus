@@ -102,7 +102,7 @@ graficoNCModule <- function(input, output, session, dados_analise, local){
     ) %>%
       # \\____ Titulo ####
     hc_title(
-      text = paste0("Número de Novos Casos por Dia", tmp_uf),
+      text = paste0("Número de Novos Casos por Dia - ", tmp_uf),
       align ="left",
       style = list(fontSize= "16px")
     ) %>%

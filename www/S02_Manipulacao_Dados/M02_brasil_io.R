@@ -10,6 +10,8 @@
 
 #arquivo <- "https://raw.githubusercontent.com/gu-stat/dados_covid19_br/master/covid19-brasil_io_novo.csv"
 
+#salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io_novo.csv"
+
 salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io.csv"
 
 # |_ Download ==================================================================
