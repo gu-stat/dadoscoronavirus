@@ -90,7 +90,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_map <-
           dados_estados %>%
-          filter(dia == data_final) %>%
+          filter(is_last == "True") %>%
           select(uf_num, uf, uf_nome, casos_confirmados) %>%
           rename(
             "variavel_analise_mapa" = casos_confirmados
@@ -128,17 +128,12 @@ mapaModule <- function(input, output, session, local){
         
         tmp_map <-
           dados_estados %>%
-          filter(dia == data_final) %>%
+          filter(is_last == "True") %>%
           select(uf_num, uf, uf_nome, mortes_confirmadas) %>%
           rename(
             "variavel_analise_mapa" = mortes_confirmadas
           )
-        
-        # group_by(uf_num, uf, uf_nome) %>%
-        # summarise(
-        #   variavel_analise_mapa = sum(mortes_dia)
-        # )
-        
+
         tmp_min_mapa <- min(tmp_map$variavel_analise_mapa, na.rm = TRUE)
         
         tmp_max_mapa <- max(tmp_map$variavel_analise_mapa, na.rm = TRUE)
@@ -176,9 +171,9 @@ mapaModule <- function(input, output, session, local){
         
         tmp_map <-
           dados_selecionados_cidade %>%
-          filter(is_last == "True") %>%
-          filter(uf_num == local()) %>%
           filter(place_type == "city") %>%
+          filter(uf_num == local()) %>%
+          filter(is_last == "True") %>%
           rename(
             "variavel_analise_mapa" = casos_confirmados
           )
@@ -213,9 +208,9 @@ mapaModule <- function(input, output, session, local){
         
         tmp_map <-
           dados_selecionados_cidade %>%
-          filter(is_last == "True") %>%
-          filter(uf_num == local()) %>%
           filter(place_type == "city") %>%
+          filter(uf_num == local()) %>%
+          filter(is_last == "True") %>%
           rename(
             "variavel_analise_mapa" = mortes_confirmadas
           )

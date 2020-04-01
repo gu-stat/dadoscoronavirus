@@ -60,8 +60,6 @@ dados_originais_br_io <- read.csv(
 dados_selecionados_cidade <-
   dados_originais_br_io %>%
   tibble::as_tibble() %>%
-  #filter(is_last == "True") %>%
-  filter(as.Date(date) != "2020-03-29")  %>%
   rename(
     "uf"                 = "state",
     "municipio"          = "city",
@@ -164,12 +162,14 @@ dados_brasil <-
   dados_estados %>%
   group_by(dia) %>%
   summarise(
-    casos_confirmados    = sum(casos_confirmados, na.rm = TRUE),
-    mortes_confirmadas   = sum(mortes_confirmadas, na.rm = TRUE),
     confirmados_dia      = sum(confirmados_dia, na.rm = TRUE),
     mortes_dia           = sum(mortes_dia, na.rm = TRUE)
-  ) 
- 
+  ) %>%
+  mutate(
+    casos_confirmados  = cumsum(confirmados_dia),
+    mortes_confirmadas = cumsum(mortes_dia)
+  )
+
 # |_ Dados Selecionados ========================================================
 
 # |_ Datas =====================================================================
