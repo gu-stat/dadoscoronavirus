@@ -10,7 +10,7 @@
 
 #arquivo <- "https://raw.githubusercontent.com/gu-stat/dados_covid19_br/master/covid19-brasil_io_novo.csv"
 
-#salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io_novo.csv"
+# salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io_novo.csv"
 
 salvar_como <- "./www/S00_Dados_Brutos/covid19-brasil_io.csv"
 
@@ -198,23 +198,6 @@ data_comeco_br <- format(as.Date(data_comeco), "%d/%m/%Y")
 
 data_final_br  <- format(as.Date(data_final), "%d/%m/%Y")
 
-# \___ Datas das Previsoes -----------------------------------------------------
-
-# dias.a.frente <- 5
-# 
-# data_range_forecast <- 
-#   data_range %>%
-#   arrange(dia) %>%
-#   c(data_final + days(1:dias.a.frente))
-#   
-#   format(
-#   c(data_final + days(dias.a.frente:1), c(data_range)$dia), 
-#   format = "%d/%m/%Y"
-# )
-
-# ************************************************************************* ####
-# FIM                                                                       ####
-# **************************************************************************** #
 # ************************************************************************* ####
 # FIM                                                                       ####
 # **************************************************************************** #

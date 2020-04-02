@@ -47,6 +47,8 @@ library("zoo")
 source('./www/S01_Helpers/get_brmap_fixed.R', local = TRUE)
 source('./www/S01_Helpers/escalas.R', local = TRUE)
 source('./www/S01_Helpers/casos_novos_dia.R', local = TRUE)
+source('./www/S01_Helpers/previsoes.R', local = TRUE)
+source('./www/S01_Helpers/grafico_previsoes.R', local = TRUE)
 
 # ************************************************************************* ----
 # Dados                                                                     ----
@@ -140,6 +142,41 @@ cores_mapa_confirmado_caso_min <- "#f7f7f7"
 cores_mapa_confirmado_morte <- "red"
 cores_mapa_confirmado_morte_min <- "#f7f7f7"
   #"#ffc4c6"
+
+# As cores a seguir sao colorblind safe:
+# https://gka.github.io/palettes/#/7|d|000000,ff0000,ffff00|90ee90,008000,068ad6|1|1
+cores_previsao_95  <- '#5fb597'
+cores_previsao_80  <- '#8fdc70'
+cores_previsao_est <- '#ffff00'
+
+cores_previsao_80_anterior  <- '#e38704'
+cores_previsao_95_anterior  <- '#83330e'
+cores_previsao_est_anterior <- '#000000'
+
+# |_ Fontes ====================================================================
+
+fonte_grafico_br <- "Dados: Brasil.io - https://brasil.io/dataset/covid19/caso"
+
+# |_ Creditos ==================================================================
+
+credito_grafico <- "Gráfico: Gustavo Varela-Alvarenga - ogustavo.com/pt/"
+
+# |_ Titulos/Labels ============================================================
+
+label_br <- "Brasil"
+
+y_label_casos_confirmados       <- "Número de Casos Confirmados"
+titulo_total_casos_confirmados  <- "Número Total de Casos Confirmados"
+legenda_casos_confirmados       <- "Casos Confirmados"
+
+label_total_mortes <- "Número Total de Mortes"
+titulo_total_mortes_confirmadas  <- "Número Total de Mortes Confirmadas"
+
+# |_ Opcoes Previsoes ==========================================================
+
+data_ultima_previsao <- "2020-03-31"
+
+horizonte.previsao <- 5
 
 # ************************************************************************* ####
 # FIM                                                                       ####
