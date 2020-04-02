@@ -121,10 +121,12 @@ source('./www/S03_Modulos/M04_Secao_Fontes/UI01_fontes.R', local = TRUE)
 # \__ Boxes --------------------------------------------------------------------
 
 cores_box_confirmado_caso  <- "aqua"
+cores_box_confirmado_caso_100k <- "yellow"
 cores_box_confirmado_morte <- "red"
 cores_box_suspeito_caso    <- "darkgreen"
 cores_box_descartado_caso  <- "green"
 cores_box_taxa_mortalidade <- "purple"
+
 
 # \__ Graficos/Mapas -----------------------------------------------------------
 

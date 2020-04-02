@@ -6,11 +6,29 @@ boxesModuleUI <- function(id) {
   ns <- NS(id)
   
   fluidRow(
-    column(width = 12, valueBoxOutput(ns("casos_confirmados"), width = 11)),
+    column(
+      width = 12, 
+      valueBoxOutput(ns("casos_confirmados"), width = 11) %>%
+        withSpinner(type = 8)
+    ),
     br(),
-    column(width = 12, valueBoxOutput(ns("mortes_confirmadas"), width = 11)),
+    column(
+      width = 12, 
+      valueBoxOutput(ns("casos_confirmados_100k"), width = 11) %>% 
+        withSpinner(type = 8)
+    ),
     br(),
-    column(width = 12, valueBoxOutput(ns("taxa_mortalidade"), width = 11))
+    column(
+      width = 12, 
+      valueBoxOutput(ns("mortes_confirmadas"), width = 11) %>%
+        withSpinner(type = 8)
+    ),
+    br(),
+    column(
+      width = 12, 
+      valueBoxOutput(ns("taxa_mortalidade"), width = 11) %>%
+        withSpinner(type = 8)
+    )
   )
 }
 
@@ -34,6 +52,23 @@ boxesModule <- function(input, output, session, dados_analise){
         color    = cores_box_confirmado_caso,
         width    = NULL,
         icon     = icon("plus-circle")
+      )
+  })
+  
+  # |_ Casos Confirmados Por 100k ==============================================
+  
+  output$casos_confirmados_100k <- renderValueBox({
+    
+    dados_analise() %>%
+      tail(1) %>%
+      select(confirmed_per_100k_inhabitants) %>%
+      # round(digits = 2) %>%
+      # prettyNum(big.mark = ".", decimal.mark = ",") %>%
+      valueBox(
+        subtitle = "Casos Confirmados por 100 Mil Habitantes",
+        color    = cores_box_confirmado_caso_100k,
+        width    = NULL,
+        icon     = icon("user-plus")
       )
   })
   

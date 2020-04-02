@@ -91,10 +91,15 @@ mapaModule <- function(input, output, session, local){
         tmp_map <-
           dados_estados %>%
           filter(is_last == "True") %>%
-          select(uf_num, uf, uf_nome, casos_confirmados) %>%
+          select(
+            uf_num, uf, uf_nome, casos_confirmados, 
+            confirmed_per_100k_inhabitants
+          ) %>%
           rename(
             "variavel_analise_mapa" = casos_confirmados
           )
+        
+        tmp_tooltip <- "{point.uf}: {point.value:,.0f} </br> Casos por 100 Mil Habitantes: {point.confirmed_per_100k_inhabitants}"
         
         tmp_min_mapa <- min(tmp_map$variavel_analise_mapa)
         
@@ -135,6 +140,8 @@ mapaModule <- function(input, output, session, local){
           rename(
             "variavel_analise_mapa" = mortes_confirmadas
           )
+        
+        tmp_tooltip <- "{point.uf}: {point.value}"
 
         tmp_min_mapa <- min(tmp_map$variavel_analise_mapa, na.rm = TRUE)
         
@@ -180,7 +187,9 @@ mapaModule <- function(input, output, session, local){
           filter(is_last == "True") %>%
           rename(
             "variavel_analise_mapa" = casos_confirmados
-          )
+          ) 
+        
+        tmp_tooltip <- "{point.municipio}: {point.value} </br> Casos por 100 Mil Habitantes: {point.confirmed_per_100k_inhabitants}"
         
         tmp_min_mapa <- min(tmp_map$variavel_analise_mapa)
         
@@ -226,6 +235,8 @@ mapaModule <- function(input, output, session, local){
           rename(
             "variavel_analise_mapa" = mortes_confirmadas
           )
+        
+        tmp_tooltip <- "{point.municipio}: {point.value}"
         
         tmp_min_mapa <- min(tmp_map$variavel_analise_mapa)
         
@@ -274,7 +285,8 @@ mapaModule <- function(input, output, session, local){
       tmp_max_color_mapa = tmp_max_color_mapa, 
       tmp_name_mapa      = tmp_name_mapa, 
       tmp_titulo_mapa    = tmp_titulo_mapa,
-      tmp_fonte_mapa     = tmp_fonte_mapa
+      tmp_fonte_mapa     = tmp_fonte_mapa,
+      tmp_tooltip        = tmp_tooltip
     ))
     
   })
@@ -303,7 +315,9 @@ mapaModule <- function(input, output, session, local){
         # \\____ Info na Tooltip ####
       hc_tooltip(
         useHTML = TRUE,
-        pointFormat = "{point.uf}: {point.value}"
+        #header = "{point.uf}",
+        #pointFormat = "{point.uf}: {point.value:} </br> Casos por 100 Mil Habitantes: {point.confirmed_per_100k_inhabitants}"
+        pointFormat = mapa_dados()$tmp_tooltip
       )
       
     } else {
@@ -325,7 +339,7 @@ mapaModule <- function(input, output, session, local){
         # \\____ Info na Tooltip ####
       hc_tooltip(
         useHTML = TRUE,
-        pointFormat = "{point.municipio}: {point.value}"
+        pointFormat = mapa_dados()$tmp_tooltip
       )
     }
     
