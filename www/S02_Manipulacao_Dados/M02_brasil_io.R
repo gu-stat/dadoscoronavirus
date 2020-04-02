@@ -71,7 +71,8 @@ dados_selecionados_cidade <-
     dia = as.Date(date),
     uf_num = substr(cod_municipio, 1, 2),
     casos_confirmados  = as.numeric(confirmed),
-    mortes_confirmadas = as.numeric(deaths)
+    mortes_confirmadas = as.numeric(deaths),
+    confirmed_per_100k_inhabitants = round(as.numeric(confirmed_per_100k_inhabitants), 2)
   ) %>%
   mutate(
     uf_nome = case_when(

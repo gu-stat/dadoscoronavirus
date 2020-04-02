@@ -187,7 +187,14 @@ mapaModule <- function(input, output, session, local){
           filter(is_last == "True") %>%
           rename(
             "variavel_analise_mapa" = casos_confirmados
-          ) 
+          ) %>%
+          mutate(
+            confirmed_per_100k_inhabitants = prettyNum(
+              confirmed_per_100k_inhabitants,
+              big.mark = ".", 
+              decimal.mark = ","
+            )
+          )
         
         tmp_tooltip <- "{point.municipio}: {point.value} </br> Casos por 100 Mil Habitantes: {point.confirmed_per_100k_inhabitants}"
         
