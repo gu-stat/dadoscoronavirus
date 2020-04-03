@@ -1,4 +1,18 @@
 date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,city_ibge_code,confirmed_per_100k_inhabitants,death_rate
+2020-04-03,AP,Macapá,city,19,0,True,503327,1600303,3.77488,
+2020-04-03,AP,,state,19,0,True,845731,16,2.24658,
+2020-04-03,PA,Abaetetuba,city,1,0,True,157698,1500107,0.63412,
+2020-04-03,PA,Ananindeua,city,9,0,True,530598,1500800,1.6962,
+2020-04-03,PA,Barcarena,city,1,0,True,124680,1501303,0.80205,
+2020-04-03,PA,Belém,city,30,0,True,1492745,1501402,2.00972,
+2020-04-03,PA,Castanhal,city,1,0,True,200793,1502400,0.49803,
+2020-04-03,PA,Itaituba,city,1,0,True,101247,1503606,0.98768,
+2020-04-03,PA,Marabá,city,1,0,True,279349,1504208,0.35798,
+2020-04-03,PA,Marituba,city,1,0,True,131521,1504422,0.76033,
+2020-04-03,PA,Parauapebas,city,1,0,True,208273,1505536,0.48014,
+2020-04-03,PA,Santarém,city,4,1,True,304589,1506807,1.31325,0.25
+2020-04-03,PA,Tucuruí,city,1,0,True,113659,1508100,0.87982,
+2020-04-03,PA,,state,51,1,True,8602865,15,0.59283,0.0196
 2020-04-02,AC,Acrelândia,city,8,0,True,15256,1200013,52.43838,
 2020-04-02,AC,Porto Acre,city,1,0,True,18504,1200807,5.40424,
 2020-04-02,AC,Rio Branco,city,36,0,True,407319,1200401,8.83828,
@@ -18,8 +32,8 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-02,AM,Santo Antônio do Içá,city,4,0,True,21602,1303700,18.5168,
 2020-04-02,AM,Tonantins,city,3,0,True,18755,1304237,15.99573,
 2020-04-02,AM,,state,229,3,True,4144597,13,5.52527,0.0131
-2020-04-02,AP,Macapá,city,12,0,True,503327,1600303,2.38414,
-2020-04-02,AP,,state,12,0,True,845731,16,1.41889,
+2020-04-02,AP,Macapá,city,12,0,False,503327,1600303,2.38414,
+2020-04-02,AP,,state,12,0,False,845731,16,1.41889,
 2020-04-02,BA,Alagoinhas,city,3,0,True,151596,2900702,1.97894,
 2020-04-02,BA,Barra,city,1,0,True,53578,2902708,1.86644,
 2020-04-02,BA,Barra do Rocha,city,1,0,True,5714,2903102,17.50088,
@@ -57,6 +71,24 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-02,BA,Teixeira de Freitas,city,2,0,True,160487,2931350,1.24621,
 2020-04-02,BA,Vitória da Conquista,city,1,0,True,341597,2933307,0.29274,
 2020-04-02,BA,,state,267,3,True,14873064,29,1.79519,0.0112
+2020-04-02,CE,Aquiraz,city,13,0,True,80271,2301000,16.19514,
+2020-04-02,CE,Beberibe,city,1,0,True,53573,2302206,1.86661,
+2020-04-02,CE,Caucaia,city,1,0,True,361400,2303709,0.2767,
+2020-04-02,CE,Eusébio,city,1,0,True,53618,2304285,1.86505,
+2020-04-02,CE,Fortaleza,city,526,0,True,2669342,2304400,19.70523,
+2020-04-02,CE,Icó,city,2,0,True,68018,2305407,2.9404,
+2020-04-02,CE,Itaitinga,city,1,0,True,37980,2306256,2.63296,
+2020-04-02,CE,Itapipoca,city,1,0,True,129358,2306405,0.77305,
+2020-04-02,CE,Jaguaribe,city,1,0,True,34682,2306900,2.88334,
+2020-04-02,CE,Juazeiro do Norte,city,1,0,True,274207,2307304,0.36469,
+2020-04-02,CE,Maracanaú,city,2,0,True,227886,2307650,0.87763,
+2020-04-02,CE,Maranguape,city,2,0,True,128978,2307700,1.55065,
+2020-04-02,CE,Mauriti,city,1,0,True,47962,2308104,2.08498,
+2020-04-02,CE,Quixadá,city,2,0,True,87728,2311306,2.27977,
+2020-04-02,CE,Santa Quitéria,city,1,0,True,43703,2312205,2.28817,
+2020-04-02,CE,Sobral,city,5,0,True,208935,2312908,2.39309,
+2020-04-02,CE,Tianguá,city,2,0,True,75946,2313401,2.63345,
+2020-04-02,CE,,state,563,21,True,9132078,23,6.16508,0.0373
 2020-04-02,DF,Brasília,city,400,5,True,3015268,5300108,13.26582,0.0125
 2020-04-02,DF,,state,400,5,True,3015268,53,13.26582,0.0125
 2020-04-02,ES,Afonso Cláudio,city,1,0,True,30586,3200102,3.26947,
@@ -165,18 +197,18 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-02,MT,Tangará da Serra,city,2,0,True,103750,5107958,1.92771,
 2020-04-02,MT,Várzea Grande,city,4,0,True,284971,5108402,1.40365,
 2020-04-02,MT,,state,41,0,True,3484466,51,1.17665,
-2020-04-02,PA,Abaetetuba,city,1,0,True,157698,1500107,0.63412,
-2020-04-02,PA,Ananindeua,city,8,0,True,530598,1500800,1.50773,
-2020-04-02,PA,Barcarena,city,1,0,True,124680,1501303,0.80205,
-2020-04-02,PA,Belém,city,25,0,True,1492745,1501402,1.67477,
-2020-04-02,PA,Castanhal,city,1,0,True,200793,1502400,0.49803,
-2020-04-02,PA,Itaituba,city,1,0,True,101247,1503606,0.98768,
-2020-04-02,PA,Marabá,city,1,0,True,279349,1504208,0.35798,
-2020-04-02,PA,Marituba,city,1,0,True,131521,1504422,0.76033,
-2020-04-02,PA,Parauapebas,city,1,0,True,208273,1505536,0.48014,
-2020-04-02,PA,Santarém,city,4,1,True,304589,1506807,1.31325,0.25
-2020-04-02,PA,Tucuruí,city,1,0,True,113659,1508100,0.87982,
-2020-04-02,PA,,state,45,1,True,8602865,15,0.52308,0.0222
+2020-04-02,PA,Abaetetuba,city,1,0,False,157698,1500107,0.63412,
+2020-04-02,PA,Ananindeua,city,9,0,False,530598,1500800,1.6962,
+2020-04-02,PA,Barcarena,city,1,0,False,124680,1501303,0.80205,
+2020-04-02,PA,Belém,city,28,0,False,1492745,1501402,1.87574,
+2020-04-02,PA,Castanhal,city,1,0,False,200793,1502400,0.49803,
+2020-04-02,PA,Itaituba,city,1,0,False,101247,1503606,0.98768,
+2020-04-02,PA,Marabá,city,1,0,False,279349,1504208,0.35798,
+2020-04-02,PA,Marituba,city,1,0,False,131521,1504422,0.76033,
+2020-04-02,PA,Parauapebas,city,1,0,False,208273,1505536,0.48014,
+2020-04-02,PA,Santarém,city,4,1,False,304589,1506807,1.31325,0.25
+2020-04-02,PA,Tucuruí,city,1,0,False,113659,1508100,0.87982,
+2020-04-02,PA,,state,49,1,False,8602865,15,0.56958,0.0204
 2020-04-02,PB,Cabedelo,city,1,,True,67736,2503209,1.47632,
 2020-04-02,PB,Campina Grande,city,2,,True,409731,2504009,0.48813,
 2020-04-02,PB,Igaracy,city,1,,True,6117,2502607,16.34788,
@@ -199,6 +231,10 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-02,PE,Recife,city,74,6,True,1645727,2611606,4.49649,0.0811
 2020-04-02,PE,São Lourenço da Mata,city,3,0,True,113230,2613701,2.64947,
 2020-04-02,PE,,state,106,9,True,9557071,26,1.10913,0.0849
+2020-04-02,PI,Parnaíba,city,1,1,True,153078,2207702,0.65326,1.0
+2020-04-02,PI,São José do Divino,city,1,1,True,5346,2210052,18.70557,1.0
+2020-04-02,PI,Teresina,city,17,2,True,864845,2211001,1.96567,0.1176
+2020-04-02,PI,,state,19,4,True,3273227,22,0.58047,0.2105
 2020-04-02,PR,Almirante Tamandaré,city,3,0,True,118623,4100400,2.52902,
 2020-04-02,PR,Arapongas,city,2,0,True,123027,4101507,1.62566,
 2020-04-02,PR,Araucária,city,1,0,True,143843,4101804,0.6952,
@@ -284,6 +320,23 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-02,RJ,Valença,city,1,0,True,76523,3306107,1.3068,
 2020-04-02,RJ,Volta Redonda,city,43,2,True,273012,3306305,15.75022,0.0465
 2020-04-02,RJ,,state,992,41,True,17264943,33,5.74575,0.0413
+2020-04-02,RN,Açu,city,1,0,True,58017,2400208,1.72363,
+2020-04-02,RN,Apodi,city,1,0,True,35845,2401008,2.78979,
+2020-04-02,RN,Caicó,city,1,0,True,67952,2402006,1.47163,
+2020-04-02,RN,Carnaubais,city,1,0,True,10759,2402501,9.29454,
+2020-04-02,RN,Ceará-Mirim,city,2,0,True,73497,2402600,2.7212,
+2020-04-02,RN,Importados/Indefinidos,city,3,0,True,,,,
+2020-04-02,RN,Luís Gomes,city,1,0,True,10116,2407005,9.88533,
+2020-04-02,RN,Macaíba,city,1,0,True,80792,2407104,1.23775,
+2020-04-02,RN,Monte Alegre,city,1,0,True,22451,2407807,4.45414,
+2020-04-02,RN,Mossoró,city,21,1,True,297378,2408003,7.06172,0.0476
+2020-04-02,RN,Natal,city,56,1,True,884122,2408102,6.33397,0.0179
+2020-04-02,RN,Parnamirim,city,13,0,True,261469,2403251,4.97191,
+2020-04-02,RN,Passa e Fica,city,1,0,True,13277,2409100,7.53182,
+2020-04-02,RN,São Gonçalo do Amarante,city,1,0,True,102400,2412005,0.97656,
+2020-04-02,RN,São José de Mipibu,city,1,0,True,43899,2412203,2.27796,
+2020-04-02,RN,Tibau,city,1,0,True,4106,2411056,24.3546,
+2020-04-02,RN,,state,106,2,True,3506853,24,3.02265,0.0189
 2020-04-02,RO,Jaru,city,1,0,True,51775,1100114,1.93143,
 2020-04-02,RO,Ji-Paraná,city,1,0,True,128969,1100122,0.77538,
 2020-04-02,RO,Porto Velho,city,8,1,True,529544,1100205,1.51073,0.125
@@ -543,22 +596,22 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-01,BA,Teixeira de Freitas,city,2,0,False,160487,2931350,1.24621,
 2020-04-01,BA,Vitória da Conquista,city,1,0,False,341597,2933307,0.29274,
 2020-04-01,BA,,state,246,2,False,14873064,29,1.654,0.0081
-2020-04-01,CE,Aquiraz,city,14,0,True,80271,2301000,17.44092,
-2020-04-01,CE,Beberibe,city,1,0,True,53573,2302206,1.86661,
-2020-04-01,CE,Caucaia,city,1,0,True,361400,2303709,0.2767,
-2020-04-01,CE,Eusébio,city,1,1,True,53618,2304285,1.86505,1.0
-2020-04-01,CE,Fortaleza,city,413,6,True,2669342,2304400,15.47198,0.0145
+2020-04-01,CE,Aquiraz,city,14,0,False,80271,2301000,17.44092,
+2020-04-01,CE,Beberibe,city,1,0,False,53573,2302206,1.86661,
+2020-04-01,CE,Caucaia,city,1,0,False,361400,2303709,0.2767,
+2020-04-01,CE,Eusébio,city,1,1,False,53618,2304285,1.86505,1.0
+2020-04-01,CE,Fortaleza,city,413,6,False,2669342,2304400,15.47198,0.0145
 2020-04-01,CE,Fortim,city,1,0,True,16480,2304459,6.06796,
-2020-04-01,CE,Itaitinga,city,1,0,True,37980,2306256,2.63296,
-2020-04-01,CE,Juazeiro do Norte,city,1,0,True,274207,2307304,0.36469,
-2020-04-01,CE,Maracanaú,city,1,0,True,227886,2307650,0.43882,
-2020-04-01,CE,Maranguape,city,1,0,True,128978,2307700,0.77533,
-2020-04-01,CE,Mauriti,city,1,0,True,47962,2308104,2.08498,
-2020-04-01,CE,Quixadá,city,2,0,True,87728,2311306,2.27977,
-2020-04-01,CE,Santa Quitéria,city,1,1,True,43703,2312205,2.28817,1.0
-2020-04-01,CE,Sobral,city,5,0,True,208935,2312908,2.39309,
-2020-04-01,CE,Tianguá,city,1,1,True,75946,2313401,1.31673,1.0
-2020-04-01,CE,,state,445,9,True,9132078,23,4.87293,0.0202
+2020-04-01,CE,Itaitinga,city,1,0,False,37980,2306256,2.63296,
+2020-04-01,CE,Juazeiro do Norte,city,1,0,False,274207,2307304,0.36469,
+2020-04-01,CE,Maracanaú,city,1,0,False,227886,2307650,0.43882,
+2020-04-01,CE,Maranguape,city,1,0,False,128978,2307700,0.77533,
+2020-04-01,CE,Mauriti,city,1,0,False,47962,2308104,2.08498,
+2020-04-01,CE,Quixadá,city,2,0,False,87728,2311306,2.27977,
+2020-04-01,CE,Santa Quitéria,city,1,1,False,43703,2312205,2.28817,1.0
+2020-04-01,CE,Sobral,city,5,0,False,208935,2312908,2.39309,
+2020-04-01,CE,Tianguá,city,1,1,False,75946,2313401,1.31673,1.0
+2020-04-01,CE,,state,445,9,False,9132078,23,4.87293,0.0202
 2020-04-01,DF,Brasília,city,370,4,False,3015268,5300108,12.27088,0.0108
 2020-04-01,DF,,state,370,4,False,3015268,53,12.27088,0.0108
 2020-04-01,ES,Afonso Cláudio,city,1,0,False,30586,3200102,3.26947,
@@ -691,10 +744,10 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-01,PE,Recife,city,64,5,False,1645727,2611606,3.88886,0.0781
 2020-04-01,PE,São Lourenço da Mata,city,3,0,False,113230,2613701,2.64947,
 2020-04-01,PE,,state,95,8,False,9557071,26,0.99403,0.0842
-2020-04-01,PI,Parnaíba,city,1,1,True,153078,2207702,0.65326,1.0
-2020-04-01,PI,São José do Divino,city,1,1,True,5346,2210052,18.70557,1.0
-2020-04-01,PI,Teresina,city,17,2,True,864845,2211001,1.96567,0.1176
-2020-04-01,PI,,state,19,4,True,3273227,22,0.58047,0.2105
+2020-04-01,PI,Parnaíba,city,1,1,False,153078,2207702,0.65326,1.0
+2020-04-01,PI,São José do Divino,city,1,1,False,5346,2210052,18.70557,1.0
+2020-04-01,PI,Teresina,city,17,2,False,864845,2211001,1.96567,0.1176
+2020-04-01,PI,,state,19,4,False,3273227,22,0.58047,0.2105
 2020-04-01,PR,Almirante Tamandaré,city,3,0,False,118623,4100400,2.52902,
 2020-04-01,PR,Arapongas,city,2,0,False,123027,4101507,1.62566,
 2020-04-01,PR,Araucária,city,1,0,False,143843,4101804,0.6952,
@@ -770,23 +823,23 @@ date,state,city,place_type,confirmed,deaths,is_last,estimated_population_2019,ci
 2020-04-01,RJ,Valença,city,1,0,False,76523,3306107,1.3068,
 2020-04-01,RJ,Volta Redonda,city,12,1,False,273012,3306305,4.39541,0.0833
 2020-04-01,RJ,,state,832,28,False,17264943,33,4.81901,0.0337
-2020-04-01,RN,Açu,city,1,0,True,58017,2400208,1.72363,
-2020-04-01,RN,Apodi,city,1,0,True,35845,2401008,2.78979,
-2020-04-01,RN,Caicó,city,0,0,True,67952,2402006,,
-2020-04-01,RN,Carnaubais,city,1,0,True,10759,2402501,9.29454,
-2020-04-01,RN,Ceará-Mirim,city,1,0,True,73497,2402600,1.3606,
-2020-04-01,RN,Importados/Indefinidos,city,2,0,True,,,,
-2020-04-01,RN,Luís Gomes,city,1,0,True,10116,2407005,9.88533,
-2020-04-01,RN,Macaíba,city,1,0,True,80792,2407104,1.23775,
-2020-04-01,RN,Monte Alegre,city,1,0,True,22451,2407807,4.45414,
-2020-04-01,RN,Mossoró,city,20,1,True,297378,2408003,6.72545,0.05
-2020-04-01,RN,Natal,city,48,1,True,884122,2408102,5.42911,0.0208
-2020-04-01,RN,Parnamirim,city,11,0,True,261469,2403251,4.207,
-2020-04-01,RN,Passa e Fica,city,1,0,True,13277,2409100,7.53182,
-2020-04-01,RN,São Gonçalo do Amarante,city,1,0,True,102400,2412005,0.97656,
-2020-04-01,RN,São José de Mipibu,city,1,0,True,43899,2412203,2.27796,
-2020-04-01,RN,Tibau,city,1,0,True,4106,2411056,24.3546,
-2020-04-01,RN,,state,92,2,True,3506853,24,2.62343,0.0217
+2020-04-01,RN,Açu,city,1,0,False,58017,2400208,1.72363,
+2020-04-01,RN,Apodi,city,1,0,False,35845,2401008,2.78979,
+2020-04-01,RN,Caicó,city,0,0,False,67952,2402006,,
+2020-04-01,RN,Carnaubais,city,1,0,False,10759,2402501,9.29454,
+2020-04-01,RN,Ceará-Mirim,city,1,0,False,73497,2402600,1.3606,
+2020-04-01,RN,Importados/Indefinidos,city,2,0,False,,,,
+2020-04-01,RN,Luís Gomes,city,1,0,False,10116,2407005,9.88533,
+2020-04-01,RN,Macaíba,city,1,0,False,80792,2407104,1.23775,
+2020-04-01,RN,Monte Alegre,city,1,0,False,22451,2407807,4.45414,
+2020-04-01,RN,Mossoró,city,20,1,False,297378,2408003,6.72545,0.05
+2020-04-01,RN,Natal,city,48,1,False,884122,2408102,5.42911,0.0208
+2020-04-01,RN,Parnamirim,city,11,0,False,261469,2403251,4.207,
+2020-04-01,RN,Passa e Fica,city,1,0,False,13277,2409100,7.53182,
+2020-04-01,RN,São Gonçalo do Amarante,city,1,0,False,102400,2412005,0.97656,
+2020-04-01,RN,São José de Mipibu,city,1,0,False,43899,2412203,2.27796,
+2020-04-01,RN,Tibau,city,1,0,False,4106,2411056,24.3546,
+2020-04-01,RN,,state,92,2,False,3506853,24,2.62343,0.0217
 2020-04-01,RO,Jaru,city,1,0,False,51775,1100114,1.93143,
 2020-04-01,RO,Ji-Paraná,city,1,0,False,128969,1100122,0.77538,
 2020-04-01,RO,Porto Velho,city,7,1,False,529544,1100205,1.32189,0.1429
