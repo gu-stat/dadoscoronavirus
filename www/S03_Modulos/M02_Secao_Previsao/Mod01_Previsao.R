@@ -10,27 +10,28 @@ previsaoModuleUI <- function(id) {
       id = "main-previsao",
       width = 10,
       # \__ Graficos -------------------------------------------------------------
-      fluidRow(
-        box(
-          width = 12,
-          highchartOutput(ns('previsao_aan')) %>%
-            withSpinner(type = 8)
-        )
-      ),
+      # fluidRow(
+      #   box(
+      #     width = 12,
+      #     highchartOutput(ns('previsao_aan')) %>%
+      #       withSpinner(type = 8)
+      #   )
+      # ),
       fluidRow(
         box(
           width = 12,
           highchartOutput(ns('previsao_mmn')) %>%
             withSpinner(type = 8)
         )
-      ),
-      fluidRow(
-        box(
-          width = 12,
-          highchartOutput(ns('previsao_auto')) %>% 
-            withSpinner(type = 8)
-        )
       )
+      # ,
+      # fluidRow(
+      #   box(
+      #     width = 12,
+      #     highchartOutput(ns('previsao_auto')) %>% 
+      #       withSpinner(type = 8)
+      #   )
+      # )
     )
   
 }
