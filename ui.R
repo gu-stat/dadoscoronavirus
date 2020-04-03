@@ -28,6 +28,7 @@ fluidPage(
     collapsible = FALSE,
     fluid = FALSE
   ),
+ wellPanel(
  tabsetPanel( 
     type = "pills",
     
@@ -45,7 +46,7 @@ fluidPage(
     
     
     
-  ),
+  )),
   
  # Footer ======================================================================
   hr(),
@@ -61,7 +62,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v02.01")
+          p("Versão Open Beta - v02.02")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(
