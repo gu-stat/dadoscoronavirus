@@ -25,8 +25,11 @@ fluidPage(
     
     #title = "Coronavírus: Casos Observados e Previsões para Estados e Brasil",
     title = "Coronavírus: Casos Observados nos Estados e no Brasil",
-    collapsible = TRUE,
-    fluid = TRUE,
+    collapsible = FALSE,
+    fluid = FALSE
+  ),
+ tabsetPanel( 
+    type = "pills",
     
     # \__ Painel - Resumo ------------------------------------------------------
     tabPanel(title = "Resumo", pagina_resumo, value = "pagina-resumo"),
@@ -58,7 +61,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v01.15")
+          p("Versão Open Beta - v02.01")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(

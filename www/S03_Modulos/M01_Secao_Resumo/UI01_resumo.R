@@ -4,6 +4,7 @@
 
 pagina_resumo <- fluidPage(
   id = "pagina-resumo",
+  hr(),
   sidebarLayout(
     sidebarPanel(
       width = 2,
