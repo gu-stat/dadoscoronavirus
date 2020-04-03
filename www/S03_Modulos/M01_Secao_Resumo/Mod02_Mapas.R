@@ -117,7 +117,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_data_final  <- ymd(max(data_final))
         
-        tmp_data_final_br  <- format(as.Date(tmp_data_final), "%m/%d/%Y")
+        tmp_data_final_br  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
         tmp_titulo_mapa <- paste0(
           "Número Total de Casos Confirmados até ", tmp_data_final_br," - Brasil"
@@ -159,10 +159,10 @@ mapaModule <- function(input, output, session, local){
         
         tmp_data_final  <- ymd(max(data_final))
         
-        tmp_data_final_br  <- format(as.Date(tmp_data_final), "%m/%d/%Y")
+        tmp_data_final_br  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
         tmp_titulo_mapa <- paste0(
-          "Número Total de Mortes Confirmadas até ", tmp_data_final_br," - Brazil"
+          "Número Total de Mortes Confirmadas até ", tmp_data_final_br," - Brasil"
         )
         
         # tmp_fonte_mapa <- 
@@ -220,7 +220,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_data_final  <- ymd(min(tmp_map$dia))
         
-        tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%m/%d/%Y")
+        tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
         tmp_titulo_mapa <- paste0(
           "Número Total de Casos Confirmados até ", tmp_data_final_mun," - ",
@@ -268,7 +268,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_data_final  <- ymd(min(tmp_map$dia))
         
-        tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%m/%d/%Y")
+        tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
         tmp_titulo_mapa <- paste0(
           "Número Total de Mortes Confirmadas até ", tmp_data_final_mun," - ",
