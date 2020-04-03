@@ -4,6 +4,7 @@
 
 dados_brutos <- fluidPage(
   id = "dados-brutos",
+  hr(),
   dadosModuleUI(id = "dados-brutos")
 )
 

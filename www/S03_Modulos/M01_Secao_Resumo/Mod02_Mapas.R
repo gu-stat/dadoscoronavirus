@@ -5,14 +5,14 @@
 mapaModuleUI <- function(id) {
   ns <- NS(id)
   
-  fluidRow(
-    id = id,
+  # fluidRow(
+  #   id = id,
     box(
-      width = 11,
+      width = 12,
       highchartOutput(ns("mapa_acumulado")) %>% withSpinner(type = 8),
       uiOutput(ns("variavel_mapa"))
     )
-  )
+  #)
 }
 
 # ************************************************************************* ----

@@ -4,14 +4,14 @@
 
 graficoNCModuleUI <- function(id) {
   ns <- NS(id)
-  fluidRow(
-    class = "row-eq-height",
+  #fluidRow(
+    #class = "row-eq-height",
     box(
-      width = 11,
+      width = 12,
       highchartOutput(ns("novos_casos"))%>% withSpinner(type = 8),
       uiOutput(ns("escala_novos_casos"))
     )
-  )
+  #)
 }
 
 # ************************************************************************* ----

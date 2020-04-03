@@ -28,10 +28,11 @@ fluidPage(
     collapsible = FALSE,
     fluid = FALSE
   ),
- wellPanel(
- tabsetPanel( 
+ wellPanel( 
+ #shinyWidgets::panel(
+ tabsetPanel(
     type = "pills",
-    
+  
     # \__ Painel - Resumo ------------------------------------------------------
     tabPanel(title = "Resumo", pagina_resumo, value = "pagina-resumo"),
     
@@ -46,7 +47,8 @@ fluidPage(
     
     
     
-  )),
+  )
+ ),
   
  # Footer ======================================================================
   hr(),

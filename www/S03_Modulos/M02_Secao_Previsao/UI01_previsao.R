@@ -4,6 +4,7 @@
 
 previsao <- fluidPage(
   id = "previsao",
+  hr(),
   previsaoModuleUI(id = "previsao")
 )
 

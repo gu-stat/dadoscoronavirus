@@ -5,14 +5,14 @@
 graficoMAModuleUI <- function(id) {
   ns <- NS(id)
 
-  fluidRow(
-    class = "row-eq-height",
+  #fluidRow(
+   # class = "row-eq-height",
     box(
-      width = 11,
+      width = 12,
       highchartOutput(ns("barra_mais_afetados"))%>% withSpinner(type = 8),
       uiOutput(ns("variavel_mais_afetados"))
     )
-  )
+  #)
   
 }
 

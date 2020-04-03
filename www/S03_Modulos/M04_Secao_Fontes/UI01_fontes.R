@@ -4,6 +4,7 @@
 
 fontes <- fluidPage(
   id = "fontes",
+  hr(),
   fontesModuleUI(id = "fontes")
 )
 
