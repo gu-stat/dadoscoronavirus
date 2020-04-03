@@ -16,7 +16,7 @@ fcn_previsoes <- function(DF,
   tmp <- 
     DF %>%
     select(!!variavel_analise) %>%
-    as.zoo(order.by = dados_brasil$dia)
+    as.zoo(order.by = DF$dia)
   
   # ANN Simple exponential smoothing with additive errors
   # MNN Simple exponential smoothing with MULTIPLICATIVE errors
@@ -70,6 +70,8 @@ fcn_previsoes <- function(DF,
   
   if (modelo == "ZZZ"){
     tmp_modelo_arquivo <- "ZZZ_"
+  } else if(modelo == "MMN"){
+    tmp_modelo_arquivo <- "MMN_"
   } else {
     tmp_modelo_arquivo <- gsub("[\\(+\\)]","_", gsub(",","_", tmp_modelo))
   }
@@ -106,11 +108,14 @@ fcn_previsoes <- function(DF,
   # \__ Importar Previsoes Anteriores ----------------------------------------
   
   if (importa_dados == TRUE) {
+    # Transforma data para pode colocar como nome de variavel
+    tmp_data_anterior <- format(data_previsao_anterior, format = "%Y_%m_%d")
+    
     tmp_data_plot_anterior <- read.csv(
       file = paste0(
         "./www/S00_Dados_Brutos/Previsoes/previsao_",
         tmp_modelo_arquivo,
-        data_previsao_anterior,
+        tmp_data_anterior,
         ".csv"
       )
     )

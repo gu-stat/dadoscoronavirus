@@ -108,7 +108,28 @@ previsaoModule <- function(input, output, session){
   # |_ Previsao MMN ============================================================
 
   output$previsao_mmn = renderHighchart({
-
+    
+    tmp_variavel_analise <- "casos_confirmados"
+    
+    tmp_localidade       <- label_br
+    
+    tmp_fonte            <- fonte_grafico_br
+    
+    tmp_credito          <- credito_grafico
+    
+    tmp_y_label          <- y_label_casos_confirmados
+    
+    tmp_titulo           <- titulo_total_casos_confirmados
+    
+    tmp_legenda          <- legenda_casos_confirmados
+    
+    tmp_cor              <- cores_graficos_confirmado_caso
+    
+    tmp_data_ultima_previsao <- format(
+      as.Date(data_ultima_previsao),
+      format = "%Y_%m_%d"
+    )
+    
     resultados_previsoes <- fcn_previsoes(
       DF                     = dados_brasil,
       variavel_analise       = tmp_variavel_analise,
@@ -118,7 +139,7 @@ previsaoModule <- function(input, output, session){
       importa_dados          = TRUE,
       data_previsao_anterior = tmp_data_ultima_previsao
     )
-
+    
     fcn_grafico_previsoes(
       DF                 = resultados_previsoes$data_plot,
       DF.anterior        = resultados_previsoes$data_plot_anterior,
