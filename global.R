@@ -51,7 +51,7 @@ library("stringr")
 # ************************************************************************* ----
 
 dados_originais_br_io <- reactiveFileReader(
-  intervalMillis = 1.8e+6, 
+  intervalMillis = 1000, 
   session = NULL, 
   filePath = "https://brasil.io/dataset/covid19/caso?format=csv", 
   readFunc = utils::read.csv
