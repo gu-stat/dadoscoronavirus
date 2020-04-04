@@ -40,6 +40,23 @@ library("forecast")
 
 library("zoo")
 
+library("rvest")
+
+library("stringr")
+
+#library("viridisLite")
+
+# ************************************************************************* ----
+# Dados                                                                     ----
+# ************************************************************************* ----
+
+dados_originais_br_io <- reactiveFileReader(
+  intervalMillis = 1.8e+6, 
+  session = NULL, 
+  filePath = "https://brasil.io/dataset/covid19/caso?format=csv", 
+  readFunc = utils::read.csv
+)
+
 # ************************************************************************* ----
 # Helpers                                                                   ----
 # ************************************************************************* ----
@@ -49,13 +66,6 @@ source('./www/S01_Helpers/escalas.R', local = TRUE)
 source('./www/S01_Helpers/casos_novos_dia.R', local = TRUE)
 source('./www/S01_Helpers/previsoes.R', local = TRUE)
 source('./www/S01_Helpers/grafico_previsoes.R', local = TRUE)
-
-# ************************************************************************* ----
-# Dados                                                                     ----
-# ************************************************************************* ----
-
-#source('./www/S02_Manipulacao_Dados/M01_belisards_coronabr.R', local = TRUE)
-source('./www/S02_Manipulacao_Dados/M02_brasil_io.R', local = TRUE)
 
 # ************************************************************************* ----
 # Modulos e UI                                                              ----
@@ -161,7 +171,8 @@ fonte_grafico_br <- "Dados: Brasil.io - https://brasil.io/dataset/covid19/caso"
 
 # |_ Creditos ==================================================================
 
-credito_grafico <- "Gráfico: Gustavo Varela-Alvarenga - ogustavo.com/pt/"
+credito_grafico <- "Fonte: Dados Coronavírus - dadoscoronavirus.com/brasil"
+credito_mapa <- "Fonte: Dados Coronavírus - dadoscoronavirus.com/brasil"
 
 # |_ Titulos/Labels ============================================================
 
