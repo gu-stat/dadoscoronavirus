@@ -1,15 +1,27 @@
 ### Código
 
-Todo o código para criação desse dashboard e a planilha original com os dados 
-
-[covid19-brasil_io.csv](https://github.com/gu-stat/dados_covid19_br/blob/master/covid19-brasil_io_novo.csv) podem ser encontrados no meu repositório no GitHub: [gu-stat/dadoscoronavirus](https://github.com/gu-stat/dadoscoronavirus)
+Todo o código para criação desse dashboard pode ser encontrado no meu repositório no GitHub: [gu-stat/dadoscoronavirus](https://github.com/gu-stat/dadoscoronavirus)
 
 ### Fonte dos Dados
 
-O site [Brasil IO](https://brasil.io/dataset/covid19/caso) compila os dados a partir dos governos estaduais, com dados sobre município.
+O site [Brasil IO](https://brasil.io/dataset/covid19/caso) compila os dados obtidos a partir de boletins de saúde dos governos estaduais, com dados sobre município.
+
+[Álvaro Justen](https://twitter.com/turicas) escreveu um texto no dia 23/03/2020, no qual ele fornece mais detalhes sobre o processo de coleta. Coloco, a seguir, um trecho desse texto.
+
+"Para conter a epidemia precisamos de atitudes locais bem específicas, ou seja, temos que agir a nível municipal e estadual, o mais rápido possível. Para resolver essas questões dos dados, [comecei uma catalogação manual e pedi ajuda a voluntários](https://twitter.com/turicas/status/1241068121202536448) e nesse fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais..."
+
+O trecho acima foi retirado do site [https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/](https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/) no dia 04/04/2020. 
+
+Para saber mais sobre a [metodologia de coleta dos dados, clique aqui](https://docs.google.com/document/d/1escumcbjS8inzAKvuXOQocMcQ8ZCqbyHU5X5hFrPpn4/edit#heading=h.dridhyh3vung).
+
+Para mais detalhes sobre a API de coleta de dados, veja [aqui](https://github.com/turicas/covid19-br/blob/master/api.md).
+
+[FAQ sobre os Dados](https://github.com/turicas/covid19-br/blob/master/faq.md).
+
+[Ajude a manter o projeto](https://apoia.se/brasilio).
 
 ### Licença dos dados
-A base de dados [caso.csv](https://data.brasil.io/dataset/covid19/_meta/list.html) obtida via [Brasil IO](https://brasil.io/dataset/covid19/caso) - e salva como [covid19-brasil_io.csv](https://github.com/gu-stat/dados_covid19_br/blob/master/covid19-brasil_io_novo.csv), no meu repositório - é disponibilizada sob a licença: [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). 
+A base de dados [caso.csv](https://data.brasil.io/dataset/covid19/_meta/list.html) obtida via [Brasil IO](https://brasil.io/dataset/covid19/caso) é disponibilizada sob a licença: [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/). 
 
 ### Outros projetos
 

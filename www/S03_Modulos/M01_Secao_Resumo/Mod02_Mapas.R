@@ -19,7 +19,7 @@ mapaModuleUI <- function(id) {
 # Server - Modulo                                                           ----
 # ************************************************************************* ----
 
-mapaModule <- function(input, output, session, local){
+mapaModule <- function(input, output, session, local, dados_estados, dados_selecionados_cidade, data_final){
   
   ns <- session$ns
   
@@ -89,7 +89,7 @@ mapaModule <- function(input, output, session, local){
         # \\____ Casos Confirmados ####
         
         tmp_map <-
-          dados_estados %>%
+          dados_estados() %>%
           filter(is_last == "True") %>%
           select(
             uf_num, uf, uf_nome, casos_confirmados, 
@@ -115,7 +115,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_name_mapa <- "Total de Casos Confirmados"
         
-        tmp_data_final  <- ymd(max(data_final))
+        tmp_data_final  <- ymd(max(data_final()))
         
         tmp_data_final_br  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
@@ -134,7 +134,7 @@ mapaModule <- function(input, output, session, local){
         # \\____ Mortes Confirmadas ####
         
         tmp_map <-
-          dados_estados %>%
+          dados_estados() %>%
           filter(is_last == "True") %>%
           select(uf_num, uf, uf_nome, mortes_confirmadas) %>%
           rename(
@@ -157,7 +157,7 @@ mapaModule <- function(input, output, session, local){
         
         tmp_name_mapa <- "Total de Mortes Confirmadas"
         
-        tmp_data_final  <- ymd(max(data_final))
+        tmp_data_final  <- ymd(max(data_final()))
         
         tmp_data_final_br  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
@@ -181,7 +181,7 @@ mapaModule <- function(input, output, session, local){
       if (input$variavel_mapa == "casos_confirmados_mapa") {
         
         tmp_map <-
-          dados_selecionados_cidade %>%
+          dados_selecionados_cidade() %>%
           filter(place_type == "city") %>%
           filter(uf_num == local()) %>%
           filter(is_last == "True") %>%
@@ -235,7 +235,7 @@ mapaModule <- function(input, output, session, local){
         # \\____ Mortes Confirmadas ####
         
         tmp_map <-
-          dados_selecionados_cidade %>%
+          dados_selecionados_cidade() %>%
           filter(place_type == "city") %>%
           filter(uf_num == local()) %>%
           filter(is_last == "True") %>%
@@ -352,6 +352,12 @@ mapaModule <- function(input, output, session, local){
     
     # \__ Plotar Mapa --------------------------------------------------------
     
+    # n <- 10
+    # stops <- data.frame(q = 0:n/n,
+    #                     c = substring(viridis(n + 1, option = 'E', direction = 1), 0, 7),
+    #                     stringsAsFactors = FALSE)
+    # stops <- list_parse2(stops)
+    
     tmp_hc %>%
       # \\____ Legenda ####
     hc_legend(
@@ -363,9 +369,31 @@ mapaModule <- function(input, output, session, local){
       # \\____ Cores ####
     hc_colorAxis(
       min = mapa_dados()$tmp_min_mapa,
-      max = mapa_dados()$tmp_max_mapa,
+      max = if(local() == "Brasil") {
+        if(input$variavel_mapa == "casos_confirmados_mapa") {
+          mapa_dados()$tmp_max_mapa
+        } else {
+          100
+        }
+      } else if(local() == 35){
+        if(input$variavel_mapa == "casos_confirmados_mapa") {
+          100
+        } else {
+          mapa_dados()$tmp_max_mapa
+        }
+      } else {
+        mapa_dados()$tmp_max_mapa
+      }
+      ,
       minColor = mapa_dados()$tmp_min_color_mapa,
-      maxColor = mapa_dados()$tmp_max_color_mapa
+      maxColor = mapa_dados()$tmp_max_color_mapa,
+      type = if(local() == "Brasil"){
+        if(input$variavel_mapa == "casos_confirmados_mapa") {
+          "logarithmic"
+        } else {
+          "linear"
+        }
+      } 
     ) %>%
       # \\____ Titulo ####
     hc_title(
@@ -384,7 +412,7 @@ mapaModule <- function(input, output, session, local){
       # \\____ Credito Criacao ####
     hc_credits(
       enabled = TRUE,
-      text = "Mapa: Gustavo Varela-Alvarenga - ogustavo.com",
+      text = credito_mapa,
       position = list(align = "right", y = -15)
       
     ) %>%

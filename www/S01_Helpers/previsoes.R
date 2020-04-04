@@ -9,6 +9,7 @@ fcn_previsoes <- function(DF,
                           exporta_dados = FALSE,
                           importa_dados = FALSE,
                           data_previsao_anterior,
+                          data_final,
                           ...){
 
   # \__ Novas Previsoes ------------------------------------------------------

@@ -20,7 +20,7 @@ graficoMAModuleUI <- function(id) {
 # Server - Modulo                                                           ----
 # ************************************************************************* ----
 
-graficoMAModule <- function(input, output, session, dados_analise, local){
+graficoMAModule <- function(input, output, session, dados_analise, local, dados_estados, dados_selecionados_cidade){
   
   ns <- session$ns
   
@@ -52,7 +52,7 @@ graficoMAModule <- function(input, output, session, dados_analise, local){
     if (local() == "Brasil") {
 
       tmp_dados_mais_afetados <-
-        dados_estados %>%
+        dados_estados() %>%
         #filter(dia == data_final) %>%
         filter(is_last == "True") %>%
         group_by(uf_num)
@@ -100,7 +100,7 @@ graficoMAModule <- function(input, output, session, dados_analise, local){
       # \__ Estados/Municipio -------------------------------------------------- 
       
       tmp_dados_mais_afetados <-
-        dados_selecionados_cidade %>%
+        dados_selecionados_cidade() %>%
         filter(is_last == "True") %>%
         filter(uf_num == local()) %>%
         filter(place_type == "city")
@@ -206,7 +206,7 @@ graficoMAModule <- function(input, output, session, dados_analise, local){
       # \\____ Credito Criacao ####
     hc_credits(
       enabled = TRUE,
-      text = "Gráfico: Gustavo Varela-Alvarenga - ogustavo.com/pt/",
+      text = credito_grafico,
       position = list(align = "right", y = -2)
       
     ) %>%

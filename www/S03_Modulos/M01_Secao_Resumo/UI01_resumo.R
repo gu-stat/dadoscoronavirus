@@ -22,12 +22,12 @@ pagina_resumo <- fluidPage(
       id = "main-resumo",
       width = 10,
       # \__ Aviso --------------------------------------------------------------
-      p(paste0("Se estiver em um desktop/laptop, passe o mouse sobre os ",
+      h6(paste0("Se estiver em um desktop/laptop, passe o mouse sobre os ",
+               "gráficos e mapa para obter mais informações. ",
+               "Se estiver em um dispositivo móvel, clique nos ",
                "gráficos e mapa para obter mais informações.")),
-      p(paste0("Se estiver em um dispositivo móvel, clique nos ",
-               "gráficos e mapa para obter mais informações.")),
-      HTML(paste0("Clique no icone ",icon("bars"), " à direita do título dos ",
-               "gráficos e mapa para exportar a imagem.")),
+      h6(HTML(paste0("Clique no icone ",icon("bars"), " à direita do título dos ",
+               "gráficos e mapa para exportar a imagem."))),
       fluidRow(
         # \__ Graficos Esquerda ------------------------------------------------
         column(

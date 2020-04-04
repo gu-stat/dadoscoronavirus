@@ -34,7 +34,8 @@ dadosModuleUI <- function(id) {
 # Server - Modulo                                                           ----
 # ************************************************************************* ----
 
-dadosModule <- function(input, output, session){
+dadosModule <- function(input, output, session, dados_originais_br_io, 
+                        dados_selecionados_cidade, dados_estados, dados_brasil){
   
   ns <- session$ns
   
@@ -65,13 +66,13 @@ dadosModule <- function(input, output, session){
       req(input$fonte_tabela)
       
       if (input$fonte_tabela == "fonte_o_brasil_io") {
-        tmp <- dados_originais_br_io
+        tmp <- dados_originais_br_io()
       } else if (input$fonte_tabela == "fonte_m_brasil_io") {
-        tmp <- dados_selecionados_cidade
+        tmp <- dados_selecionados_cidade()
       } else if (input$fonte_tabela == "fonte_e_brasil_io") {
-        tmp <- dados_estados
+        tmp <- dados_estados()
       } else if (input$fonte_tabela == "fonte_br_brasil_io") {
-        tmp <- dados_brasil
+        tmp <- dados_brasil()
       }
       
       tmp

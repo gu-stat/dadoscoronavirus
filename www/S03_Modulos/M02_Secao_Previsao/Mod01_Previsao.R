@@ -40,7 +40,7 @@ previsaoModuleUI <- function(id) {
 # Server - Modulo                                                           ----
 # ************************************************************************* ----
 
-previsaoModule <- function(input, output, session){
+previsaoModule <- function(input, output, session, dados_brasil, data_final){
   
   ns <- session$ns
   
@@ -81,13 +81,14 @@ previsaoModule <- function(input, output, session){
     )
 
     resultados_previsoes <- fcn_previsoes(
-      DF                     = dados_brasil,
+      DF                     = dados_brasil(),
       variavel_analise       = tmp_variavel_analise,
       modelo                 = "AAN",
       horizonte_previsao     = horizonte.previsao,
       exporta_dados          = FALSE,
       importa_dados          = TRUE,
-      data_previsao_anterior = tmp_data_ultima_previsao
+      data_previsao_anterior = tmp_data_ultima_previsao,
+      data_final             = data_final()
     )
 
     fcn_grafico_previsoes(
@@ -132,13 +133,14 @@ previsaoModule <- function(input, output, session){
     )
     
     resultados_previsoes <- fcn_previsoes(
-      DF                     = dados_brasil,
+      DF                     = dados_brasil(),
       variavel_analise       = tmp_variavel_analise,
       modelo                 = "MMN",
       horizonte_previsao     = horizonte.previsao,
       exporta_dados          = FALSE,
       importa_dados          = TRUE,
-      data_previsao_anterior = tmp_data_ultima_previsao
+      data_previsao_anterior = tmp_data_ultima_previsao,
+      data_final             = data_final()
     )
     
     fcn_grafico_previsoes(
@@ -162,13 +164,14 @@ previsaoModule <- function(input, output, session){
   output$previsao_auto = renderHighchart({
     
     resultados_previsoes <- fcn_previsoes(
-      DF                     = dados_brasil,
+      DF                     = dados_brasil(),
       variavel_analise       = tmp_variavel_analise,
       modelo                 = "ZZZ",
       horizonte_previsao     = horizonte.previsao,
       exporta_dados          = FALSE,
       importa_dados          = TRUE,
-      data_previsao_anterior = tmp_data_ultima_previsao
+      data_previsao_anterior = tmp_data_ultima_previsao,
+      data_final             = data_final()
     )
 
     fcn_grafico_previsoes(

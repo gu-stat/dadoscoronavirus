@@ -6,7 +6,7 @@ fluidPage(
  
   # Titulo do App ==============================================================
   
-  title = "Dashboard COVID-19 BRASIL",
+  title = "Dados Coronavírus",
   
   # Funcionalidades ============================================================
   
@@ -24,7 +24,7 @@ fluidPage(
     # \__ Titulo ---------------------------------------------------------------
     
     #title = "Coronavírus: Casos Observados e Previsões para Estados e Brasil",
-    title = "Coronavírus: Casos Observados nos Estados e no Brasil",
+    title = "COVID-19: Casos Observados nos Estados e no Brasil",
     collapsible = FALSE,
     fluid = FALSE
   ),
@@ -64,7 +64,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v02.02")
+          p("Versão Open Beta - v03.01")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(

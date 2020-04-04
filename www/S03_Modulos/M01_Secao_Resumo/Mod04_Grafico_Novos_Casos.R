@@ -116,7 +116,7 @@ graficoNCModule <- function(input, output, session, dados_analise, local){
       # \\____ Credito Criacao ####
     hc_credits(
       enabled = TRUE,
-      text = "Gráfico: Gustavo Varela-Alvarenga - ogustavo.com/pt/",
+      text = credito_grafico,
       position = list(align = "right", y = -2)
       
     ) %>%
