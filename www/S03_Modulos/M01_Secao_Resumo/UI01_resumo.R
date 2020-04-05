@@ -5,6 +5,13 @@
 pagina_resumo <- fluidPage(
   id = "pagina-resumo",
   hr(),
+  # \__ Aviso --------------------------------------------------------------
+  h6(paste0("Se estiver em um desktop/laptop, passe o mouse sobre os ",
+            "gráficos e mapa para obter mais informações. ",
+            "Se estiver em um dispositivo móvel, clique nos ",
+            "gráficos e mapa para obter mais informações.")),
+  h6(HTML(paste0("Clique no icone ",icon("bars"), " à direita do título dos ",
+                 "gráficos e mapa para exportar a imagem."))),
   sidebarLayout(
     sidebarPanel(
       width = 2,
@@ -15,19 +22,15 @@ pagina_resumo <- fluidPage(
       hr(),
       # |_ Disclaimer Dados ====================================================
       uiOutput("ultima_observacao"),
-      uiOutput("ultima_atualizacao")
+      uiOutput("ultima_atualizacao"),
+      p(paste0("Fonte: Secretarias de Saúde das Unidades Federativas, dados ",
+               "tratados por Álvaro Justen e colaboradores /"),
+        a("Brasil.IO", href = "https://brasil.io/"))
     ),
     mainPanel(
       # |_ Painel Principal ====================================================
       id = "main-resumo",
       width = 10,
-      # \__ Aviso --------------------------------------------------------------
-      h6(paste0("Se estiver em um desktop/laptop, passe o mouse sobre os ",
-               "gráficos e mapa para obter mais informações. ",
-               "Se estiver em um dispositivo móvel, clique nos ",
-               "gráficos e mapa para obter mais informações.")),
-      h6(HTML(paste0("Clique no icone ",icon("bars"), " à direita do título dos ",
-               "gráficos e mapa para exportar a imagem."))),
       fluidRow(
         # \__ Graficos Esquerda ------------------------------------------------
         column(
