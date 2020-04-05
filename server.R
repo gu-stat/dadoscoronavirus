@@ -186,17 +186,24 @@ function(input, output, session) {
   # \__ Selecao de Localidade --------------------------------------------------
 
   output$selecao_localidade <- renderUI({
+    
+    tmp_locais <-
+      dados_selecionados_cidade() %>%
+      select(regiao, uf_nome, uf_num) %>%
+      distinct() %>%
+      arrange(regiao, uf_nome, uf_num)
+    
     selectInput(
       inputId = "localidade",
       label = h4("Localidade:"),
       choices = c(
         "Brasil",
         with(
-          dados_selecionados_cidade(),
+          tmp_locais,
           split(
             setNames(
-              dados_selecionados_cidade()$uf_num,
-              dados_selecionados_cidade()$uf_nome
+              tmp_locais$uf_num,
+              tmp_locais$uf_nome
             ),
             regiao
           )
