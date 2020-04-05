@@ -100,7 +100,20 @@ function(input, output, session) {
         confirmed_per_100k_inhabitants,
         estimated_population_2019
       ) %>%
-      arrange(uf_num, cod_municipio, dia)
+      arrange(uf_num, cod_municipio, dia) %>%
+    # Ajustes Mortes CE, dia 04/04 
+      # Fonte: https://dev.org.br/api/casos-ceara-por-dia
+      mutate(
+        mortes_confirmadas = case_when(
+          is_last == "True" & cod_municipio == 2304400 & mortes_confirmadas == 0 ~ 17,
+          is_last == "True" & cod_municipio == 2304285 & mortes_confirmadas == 0 ~ 1,
+          is_last == "True" & cod_municipio == 2312205 & mortes_confirmadas == 0 ~ 1,
+          is_last == "True" & cod_municipio == 2306900 & mortes_confirmadas == 0 ~ 1,
+          is_last == "True" & cod_municipio == 2313401 & mortes_confirmadas == 0 ~ 1,
+          TRUE ~ mortes_confirmadas
+          
+        )
+      )
   })
 
   # \___ Dados Estados ---------------------------------------------------------
