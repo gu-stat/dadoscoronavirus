@@ -218,7 +218,7 @@ mapaModule <- function(input, output, session, local, dados_estados, dados_selec
         
         tmp_name_mapa <- "Total de Casos Confirmados"
         
-        tmp_data_final  <- ymd(min(tmp_map$dia))
+        tmp_data_final  <- ymd(max(tmp_map$dia))
         
         tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
@@ -249,7 +249,7 @@ mapaModule <- function(input, output, session, local, dados_estados, dados_selec
         
         tmp_max_mapa <- max(tmp_map$variavel_analise_mapa)
         
-        if (tmp_max_mapa == 0) {
+        if (tmp_max_mapa == 0 || is.na(tmp_max_mapa)) {
           tmp_max_color_mapa <- "#f7f7f7"
         } else {
           tmp_max_color_mapa <- cores_mapa_confirmado_morte
@@ -266,7 +266,7 @@ mapaModule <- function(input, output, session, local, dados_estados, dados_selec
         
         tmp_name_mapa <- "Total de Mortes Confirmadas"
         
-        tmp_data_final  <- ymd(min(tmp_map$dia))
+        tmp_data_final  <- ymd(max(tmp_map$dia))
         
         tmp_data_final_mun  <- format(as.Date(tmp_data_final), "%d/%m/%Y")
         
@@ -369,21 +369,22 @@ mapaModule <- function(input, output, session, local, dados_estados, dados_selec
       # \\____ Cores ####
     hc_colorAxis(
       min = mapa_dados()$tmp_min_mapa,
-      max = if(local() == "Brasil") {
-        if(input$variavel_mapa == "casos_confirmados_mapa") {
-          mapa_dados()$tmp_max_mapa
-        } else {
-          100
-        }
-      } else if(local() == 35){
-        if(input$variavel_mapa == "casos_confirmados_mapa") {
-          100
-        } else {
-          mapa_dados()$tmp_max_mapa
-        }
-      } else {
-        mapa_dados()$tmp_max_mapa
-      }
+      max = mapa_dados()$tmp_max_mapa
+      # if(local() == "Brasil") {
+      #   if(input$variavel_mapa == "casos_confirmados_mapa") {
+      #     mapa_dados()$tmp_max_mapa
+      #   } else {
+      #     100
+      #   }
+      # } else if(local() == 35){
+      #   if(input$variavel_mapa == "casos_confirmados_mapa") {
+      #     100
+      #   } else {
+      #     mapa_dados()$tmp_max_mapa
+      #   }
+      # } else {
+      #   mapa_dados()$tmp_max_mapa
+      # }
       ,
       minColor = mapa_dados()$tmp_min_color_mapa,
       maxColor = mapa_dados()$tmp_max_color_mapa,
