@@ -6,7 +6,7 @@ fluidPage(
  
   # Titulo do App ==============================================================
   
-  title = "Dados Coronavírus",
+  title = "Projeto Dados Coronavírus",
   
   # Funcionalidades ============================================================
   
@@ -24,7 +24,7 @@ fluidPage(
     # \__ Titulo ---------------------------------------------------------------
     
     #title = "Coronavírus: Casos Observados e Previsões para Estados e Brasil",
-    title = "COVID-19: Casos Observados nos Estados e no Brasil",
+    title = "Projeto Dados Coronavírus: Casos de COVID-19 nos Estados e no Brasil",
     collapsible = FALSE,
     fluid = FALSE
   ),
