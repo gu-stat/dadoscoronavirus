@@ -246,18 +246,22 @@ function(input, output, session) {
 
   output$ultima_atualizacao <- renderUI({
     
-    data_atualizacao_br  <- 
+    tmp_texto_atualizacao_br  <- 
       read_html("https://brasil.io/dataset/covid19/caso") %>%
       html_nodes(., "p") %>%
       str_subset(., "Importação dos dados feita em") %>%
-      str_remove(., "Dados capturados em 01 de Abril de 2020.") %>%
-      str_remove(., "Importação dos dados feita em ") %>%
-      str_remove(., "<p>") %>%
-      str_remove(., "</p>") %>%
-      str_replace_all(., "[\r\n]" , "") %>%
-      str_squish()
+      str_split(., "\n") %>%
+      unlist()
+    
+    tmp_posicao_data <-str_which(tmp_texto_atualizacao_br, "Importação")
+    
+    data_atualizacao_br <- 
+      tmp_texto_atualizacao_br[tmp_posicao_data] %>%
+      str_squish() %>%
+      str_remove(., "Importação dos dados feita em")
     
     h5(paste0("Dados atualizados em ", data_atualizacao_br))
+    
   })
 
   # |_ Modulos =================================================================
