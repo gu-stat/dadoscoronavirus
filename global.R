@@ -115,6 +115,16 @@ source('./www/S03_Modulos/M04_Secao_Fontes/Mod01_Fontes_Dados.R', local = TRUE)
 
 source('./www/S03_Modulos/M04_Secao_Fontes/UI01_fontes.R', local = TRUE)
 
+# |_ Secao: Sobre =============================================================
+
+# \__ Modulos ------------------------------------------------------------------
+
+source('./www/S03_Modulos/M05_Secao_Sobre/Mod01_Sobre.R', local = TRUE)
+
+# \__ UI -----------------------------------------------------------------------
+
+source('./www/S03_Modulos/M05_Secao_Sobre/UI01_Sobre.R', local = TRUE)
+
 # |_ CSS =======================================================================
 
 #overallCSS <- includeCSS("./www/S05_CSS/overallCSS.css")

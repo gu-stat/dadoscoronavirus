@@ -36,8 +36,12 @@ fluidPage(
     # \__ Painel - Resumo ------------------------------------------------------
     tabPanel(title = "Resumo", pagina_resumo, value = "pagina-resumo"),
     
+    
+    # \__ Painel - Sobre ------------------------------------------------
+    tabPanel(title = "Sobre o Projeto", shiny::includeHTML("./www/S03_Modulos/M05_Secao_Sobre/sobre.html") , value = "sobre"),
+    
     # \__ Painel - Previsao ----------------------------------------------------
-    tabPanel(title = "Previsões", previsao, value = "previsao"),
+    #tabPanel(title = "Previsões", previsao, value = "previsao"),
     
     # \__ Painel - Fontes ------------------------------------------------------
     tabPanel(title = "Fontes", fontes, value = "fontes"),
@@ -64,7 +68,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v03.01")
+          p("Versão Open Beta - v04.01")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(

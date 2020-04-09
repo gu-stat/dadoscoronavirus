@@ -1,0 +1,30 @@
+### O Projeto "Dados Coronavírus Brasil"
+
+Ao lidarmos com um problema novo, devemos coletar informações para que possamos compreendê-lo e definir planos de ação. A crise provocada pela doença COVID-19 não tem precedentes na história e os dados relacionados a ela – ou a falta deles – definirão a abrangência das nossas respostas e moldarão a nossa recuperação.
+
+O mapeamento das informações relativas ao número de infectados e mortos e sua evolução nas regiões do país é de extrema importância, mas é apenas uma parte do que podemos e devemos fazer. É preciso coletar e analisar informações sobre o impacto das medidas de enfrentamento à COVID-19 em termos de acesso a necessidades básicas.
+
+Em 2018, mais de 50 milhões de pessoas viviam abaixo da linha de pobreza no Brasil (menos de R\$ 420,00 per capita por mês) e cerca de 13.5 milhões de pessoas viviam na extrema pobreza (renda mensal per capita inferior a R\$ 145,00), segundo o estudo Síntese de Indicadores Sociais do IBGE. São milhões de pessoas em situação de vulnerabilidade social, que precisam de atenção específica para lidar com os impactos das medidas de contenção. 
+
+Nesse contexto, é preciso incluir nas análises não apenas dados relacionados à doença, mas também informações de indicadores socioeconômicos e dos serviços de saúde, por exemplo, para subsidiar a elaboração de políticas públicas e auxiliar no direcionamento de ações voluntárias por parte da sociedade civil. 
+
+No entanto, o cruzamento dessas informações com os dados relacionados ao COVID-19 não é tarefa simples. Primeiramente, porque a limitada quantidade de testes para diagnóstico do Coronavírus faz com que o número de infectados seja subestimado. Além disso, até o momento, tanto governos municipais quanto o Governo Federal não têm fornecido amplo acesso a dados estruturados e detalhados relacionados ao Coronavírus. O portal [https://covid.saude.gov.br/](https://covid.saude.gov.br/), lançado em 27 de março de 2020, fornece apenas a contagem de casos confirmados e óbitos a nível estadual e nacional.
+
+Para sanar essa deficiência de informações no nível municipal, voluntários coletam manualmente os dados a partir dos boletins das secretarias estaduais de saúde. É o caso do projeto Brasil IO, liderado por Álvaro Justen. Porém, essas informações ainda são incompletas e não é possível, por exemplo, traçar o perfil dos infectados no Brasil. 
+
+Diante desse contexto, elaborei o Projeto "Dados Coronavírus Brasil". O objetivo é que a plataforma seja utilizada como central de dados, análises e informações que possam ser utilizadas pelas autoridades públicas e pela comunidade em geral. O código desse site é aberto e melhorias podem ser feitas e sugeridas por qualquer pessoa.
+
+Nesse primeiro momento, a ferramenta apenas mapeia os casos de COVID-19 e os óbitos a ela relacionados nos níveis nacional, estadual e municipal. É possível também obter a planilha original (via Brasil IO) e as planilhas “limpas” que foram usadas para produzir os mapas e gráficos do site.
+
+A segunda fase consiste no preenchimento de planilha com questões importantes e sugestões de políticas públicas e, se possível, informações sobre onde obter esses dados. Essa planilha é pública e aberta, de modo a garantir o amplo acesso a seu conteúdo, e pesquisadores podem acessá-la no endereço [https://shorturl.at/gK459](https://shorturl.at/gK459).
+
+Essa é uma situação excepcional e sem precedentes, o que dificulta a definição e a reunião das informações necessárias para a elaboração de planos de ação e soluções efetivas, que otimizem os escassos recursos disponíveis. Desse modo, para que essa segunda fase seja bem sucedida, faz-se essencial um esforço conjunto, de profissionais de diversas áreas, de modo a identificar necessidades de grupos específicos, direcionando a atuação dos responsáveis.
+
+Como estatístico, acredito que dados devem ser usados para a promoção do bem social, especialmente em momentos de crise, como o que vivemos. O projeto foi pensado para ajudar pessoas, mas uma andorinha só não faz verão. Peço, assim, a sua colaboração para a implementação tempestiva das ideias aqui expostas.
+
+
+<div style="text-align: right"> Gustavo Varela-Alvarenga </br> 09 de abril de 2020 </div>
+
+
+
+

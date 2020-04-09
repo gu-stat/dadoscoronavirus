@@ -306,6 +306,13 @@ function(input, output, session) {
     dados_analise = dados,
     local         = reactive(input$localidade)
   )
+  
+  # \__ Painel - Sobre ---------------------------------------------------------
+  
+  callModule(
+    module        = sobreModule,
+    id            = "sobre"
+  )
 
   # \__ Painel - Previsao ------------------------------------------------------
 
