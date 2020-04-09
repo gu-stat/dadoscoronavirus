@@ -307,22 +307,37 @@ function(input, output, session) {
     local         = reactive(input$localidade)
   )
   
-  # \__ Painel - Sobre ---------------------------------------------------------
-  
-  callModule(
-    module        = sobreModule,
-    id            = "sobre"
-  )
-
-  # \__ Painel - Previsao ------------------------------------------------------
-
-  callModule(
-    module        = previsaoModule,
-    id            = "previsao",
-    dados_brasil  = dados_brasil,
-    data_final    = data_final
-  )
-  
+  # # \__ Painel - Sobre ---------------------------------------------------------
+  # 
+  # callModule(
+  #   module        = sobreModule,
+  #   id            = "sobre"
+  # )
+  # 
+  # # \__ Painel - Previsao ------------------------------------------------------
+  # 
+  # callModule(
+  #   module        = previsaoModule,
+  #   id            = "previsao",
+  #   dados_brasil  = dados_brasil,
+  #   data_final    = data_final
+  # )
+  output$markdown_sobre <- renderUI({
+    
+    sobre_html <- "./www/S03_Modulos/M05_Secao_Sobre/sobre.html"
+    
+    if (!file.exists(sobre_html)) {
+    rmarkdown::render(
+      input = "./www/S03_Modulos/M05_Secao_Sobre/sobre.rmd",
+      output_format = html_document(self_contained = TRUE),
+      output_file = "sobre.html"
+    )  
+    }
+    
+    shiny::includeHTML(sobre_html) 
+    
+  })
+  #shiny::includeHTML("./www/S03_Modulos/M05_Secao_Sobre/sobre.html")
   # \__ Painel - Dados Brutos --------------------------------------------------
 
   callModule(

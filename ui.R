@@ -38,7 +38,7 @@ fluidPage(
     
     
     # \__ Painel - Sobre ------------------------------------------------
-    tabPanel(title = "Sobre o Projeto", shiny::includeHTML("./www/S03_Modulos/M05_Secao_Sobre/sobre.html") , value = "sobre"),
+    tabPanel(title = "Sobre o Projeto", uiOutput("markdown_sobre") %>% withSpinner(type = 8) , value = "sobre"),
     
     # \__ Painel - Previsao ----------------------------------------------------
     #tabPanel(title = "Previsões", previsao, value = "previsao"),
