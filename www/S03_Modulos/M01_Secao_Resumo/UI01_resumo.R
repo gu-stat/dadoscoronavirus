@@ -25,7 +25,9 @@ pagina_resumo <- fluidPage(
       uiOutput("ultima_atualizacao"),
       p(paste0("Fonte: Secretarias de Saúde das Unidades Federativas, dados ",
                "tratados por Álvaro Justen e colaboradores /"),
-        a("Brasil.IO", href = "https://brasil.io/"))
+        a("Brasil.IO", href = "https://brasil.io/")),
+      p(paste0("Projeto Idealizado e Desenvolvido por:"),
+        a("Gustavo Varela-Alvarenga", href = "https://ogustavo.com/pt"))
     ),
     mainPanel(
       # |_ Painel Principal ====================================================

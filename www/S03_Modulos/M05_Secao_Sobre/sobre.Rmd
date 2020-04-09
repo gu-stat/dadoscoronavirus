@@ -1,4 +1,4 @@
-### O Projeto "Dados Coronavírus Brasil"
+# O Projeto "Dados Coronavírus Brasil"
 
 Ao lidarmos com um problema novo, devemos coletar informações para que possamos compreendê-lo e definir planos de ação. A crise provocada pela doença COVID-19 não tem precedentes na história e os dados relacionados a ela – ou a falta deles – definirão a abrangência das nossas respostas e moldarão a nossa recuperação.
 
@@ -24,6 +24,11 @@ Como estatístico, acredito que dados devem ser usados para a promoção do bem 
 
 
 <div style="text-align: right"> Gustavo Varela-Alvarenga </br> 09 de abril de 2020 </div>
+
+### Quem sou eu
+
+Meu nome é Gustavo Varela-Alvarenga. Sou estatístico, formado pela Universidade de Brasília (UnB). Após me formar, trabalhei como bolsista de pesquisa/consultor para o IPEA e como estatístico da ABDI. Durante esse tempo, obtive meu título de Mestre em Economia do Setor Público pela UnB e o texto principal da minha dissertação de mestrado foi premiada no Prêmio CNI de Economia em 2012. Entre 2012 e 2014, ministrei o curso “Estatística Aplicada” na UnB. E, em 2013, iniciei meu doutorado acadêmico em Economia na UnB, mas, em 2014, encerrei meu vínculo e me mudei para os Estados Unidos para iniciar o doutorado em Estatística pela University of Maryland, campus College Park (UMD). Em 2019, fui escolhido pela National Science Foundation (NSF) para participar de um estágio em um dos laboratórios do governo dos EUA, o Pacific Northwest National Laboratory, onde trabalhei em um projeto cujo objetivo era usar aprendizagem de máquinas (machine learning) para melhorar o desenvolvimento de ligas metálicas. No momento, divido o meu tempo dando aula na UMD – curso “Introdução à Computação Estatística com SAS©” – e trabalhando na minha tese de doutorado – um novo método de previsão de séries de tempo.
+
 
 
 
