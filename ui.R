@@ -6,7 +6,7 @@ fluidPage(
  
   # Titulo do App ==============================================================
   
-  title = "Projeto Dados Coronavírus",
+  #title = "Projeto Dados Coronavírus",
   
   # Funcionalidades ============================================================
   
