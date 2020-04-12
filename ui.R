@@ -40,6 +40,8 @@ fluidPage(
     # \__ Painel - Sobre ------------------------------------------------
     tabPanel(title = "Sobre o Projeto", uiOutput("markdown_sobre") %>% withSpinner(type = 8) , value = "sobre"),
     
+    tabPanel(title = "Sugestões de Políticas Públicas", uiOutput("markdown_questoes") %>% withSpinner(type = 8) , value = "questoes"),
+    
     # \__ Painel - Previsao ----------------------------------------------------
     #tabPanel(title = "Previsões", previsao, value = "previsao"),
     
@@ -68,7 +70,7 @@ fluidPage(
           a("Desenvolvido por: Gustavo Varela-Alvarenga - ",
             href = "https://www.ogustavo.com/pt/"),
           a("www.ogustavo.com", href = "https://www.ogustavo.com/pt/"),
-          p("Versão Open Beta - v04.01")
+          p("Versão Open Beta - v04.02")
         ),
         # \__ Comunicacao ------------------------------------------------------
         column(

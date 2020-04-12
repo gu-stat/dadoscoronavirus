@@ -16,7 +16,7 @@ Diante desse contexto, elaborei o Projeto "Dados Coronavírus Brasil". O objetiv
 
 Nesse primeiro momento, a ferramenta apenas mapeia os casos de COVID-19 e os óbitos a ela relacionados nos níveis nacional, estadual e municipal. É possível também obter a planilha original (via Brasil IO) e as planilhas “limpas” que foram usadas para produzir os mapas e gráficos do site.
 
-A segunda fase consiste no preenchimento de planilha com questões importantes e sugestões de políticas públicas e, se possível, informações sobre onde obter esses dados. Essa planilha é pública e aberta, de modo a garantir o amplo acesso a seu conteúdo, e pesquisadores podem acessá-la no endereço [https://shorturl.at/gK459](https://shorturl.at/gK459).
+A segunda fase consiste no preenchimento de planilha com questões importantes e sugestões de políticas públicas e, se possível, informações sobre onde obter esses dados. Essa planilha é pública e aberta, de modo a garantir o amplo acesso a seu conteúdo, e pesquisadores podem acessá-la no endereço [https://shorturl.at/jtyB8](https://shorturl.at/jtyB8).
 
 Essa é uma situação excepcional e sem precedentes, o que dificulta a definição e a reunião das informações necessárias para a elaboração de planos de ação e soluções efetivas, que otimizem os escassos recursos disponíveis. Desse modo, para que essa segunda fase seja bem sucedida, faz-se essencial um esforço conjunto, de profissionais de diversas áreas, de modo a identificar necessidades de grupos específicos, direcionando a atuação dos responsáveis.
 
@@ -28,8 +28,6 @@ Como estatístico, acredito que dados devem ser usados para a promoção do bem 
 ### Quem sou eu
 
 Meu nome é Gustavo Varela-Alvarenga. Sou estatístico, formado pela Universidade de Brasília (UnB). Após me formar, trabalhei como bolsista de pesquisa/consultor para o IPEA e como estatístico da ABDI. Durante esse tempo, obtive meu título de Mestre em Economia do Setor Público pela UnB e o texto principal da minha dissertação de mestrado foi premiada no Prêmio CNI de Economia em 2012. Entre 2012 e 2014, ministrei o curso “Estatística Aplicada” na UnB. E, em 2013, iniciei meu doutorado acadêmico em Economia na UnB, mas, em 2014, encerrei meu vínculo e me mudei para os Estados Unidos para iniciar o doutorado em Estatística pela University of Maryland, campus College Park (UMD). Em 2019, fui escolhido pela National Science Foundation (NSF) para participar de um estágio em um dos laboratórios do governo dos EUA, o Pacific Northwest National Laboratory, onde trabalhei em um projeto cujo objetivo era usar aprendizagem de máquinas (machine learning) para melhorar o desenvolvimento de ligas metálicas. No momento, divido o meu tempo dando aula na UMD – curso “Introdução à Computação Estatística com SAS©” – e trabalhando na minha tese de doutorado – um novo método de previsão de séries de tempo.
-
-
 
 
 

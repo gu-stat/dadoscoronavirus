@@ -215,6 +215,43 @@ function(input, output, session) {
   })
 
   # Outputs ====================================================================
+  
+  # \__ Markdown Sobre ---------------------------------------------------------
+  
+  output$markdown_sobre <- renderUI({
+    
+    sobre_html <- "./www/S03_Modulos/M05_Secao_Sobre/sobre.html"
+    
+    if (!file.exists(sobre_html)) {
+      rmarkdown::render(
+        input = "./www/S03_Modulos/M05_Secao_Sobre/sobre.rmd",
+        output_format = html_document(self_contained = TRUE),
+        output_file = "sobre.html"
+      )  
+    }
+    
+    shiny::includeHTML(sobre_html) 
+    
+  })
+  
+  # \__ Markdown Questoes Importantes ------------------------------------------
+  
+  
+  output$markdown_questoes <- renderUI({
+
+    questoes_html <- "./www/S03_Modulos/M05_Secao_Sobre/questoes.html"
+
+    if (!file.exists(questoes_html)) {
+    rmarkdown::render(
+      input = "./www/S03_Modulos/M05_Secao_Sobre/questoes.rmd",
+      output_format = html_document(self_contained = TRUE),
+      output_file = "questoes.html"
+    )
+    }
+    
+    shiny::includeHTML(questoes_html)
+
+  })
 
   # \__ Datas ------------------------------------------------------------------
   
@@ -263,7 +300,7 @@ function(input, output, session) {
     h5(paste0("Dados atualizados em ", data_atualizacao_br))
     
   })
-
+  
   # |_ Modulos =================================================================
 
   # \__ Painel - Resumo --------------------------------------------------------
@@ -322,22 +359,8 @@ function(input, output, session) {
   #   dados_brasil  = dados_brasil,
   #   data_final    = data_final
   # )
-  output$markdown_sobre <- renderUI({
-    
-    sobre_html <- "./www/S03_Modulos/M05_Secao_Sobre/sobre.html"
-    
-    if (!file.exists(sobre_html)) {
-    rmarkdown::render(
-      input = "./www/S03_Modulos/M05_Secao_Sobre/sobre.rmd",
-      output_format = html_document(self_contained = TRUE),
-      output_file = "sobre.html"
-    )  
-    }
-    
-    shiny::includeHTML(sobre_html) 
-    
-  })
-  #shiny::includeHTML("./www/S03_Modulos/M05_Secao_Sobre/sobre.html")
+  
+  
   # \__ Painel - Dados Brutos --------------------------------------------------
 
   callModule(
