@@ -50,12 +50,19 @@ library("stringr")
 # Dados                                                                     ----
 # ************************************************************************* ----
 
-dados_originais_br_io <- reactiveFileReader(
-  intervalMillis = 1000, 
-  session = NULL, 
-  filePath = "https://brasil.io/dataset/covid19/caso?format=csv", 
-  readFunc = utils::read.csv
-)
+# dados_originais_br_io <- reactiveFileReader(
+#  intervalMillis = 1000, 
+#  session = NULL, 
+#  filePath = "https://brasil.io/dataset/covid19/caso?format=csv", 
+#  readFunc = utils::read.csv
+# )
+
+dados_originais_br_io <- function(...){
+  read.csv(
+    file = "./www/S00_Dados_Brutos/Previsoes/covid19-brasil_io.csv",
+    stringsAsFactors = FALSE
+  )
+}
 
 # ************************************************************************* ----
 # Helpers                                                                   ----
